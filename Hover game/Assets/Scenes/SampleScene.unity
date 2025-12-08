@@ -443,7 +443,7 @@ MonoBehaviour:
     m_Bits: 1
   _maxDistance: 1.5
   _maxForce: 300
-  _damping: 0
+  _damping: 180
   _progressivity: 1.71
   _upFactor: 0.75
 --- !u!4 &186731034 stripped
@@ -6281,6 +6281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 658691982}
+  - component: {fileID: 658691983}
   m_Layer: 2
   m_Name: TankWeapon
   m_TagString: Untagged
@@ -6305,6 +6306,34 @@ Transform:
   - {fileID: 1294056999}
   m_Father: {fileID: 909583049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &658691983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658691981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f84b1be51ef997479517f74783c1def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _verticalAxis: {fileID: 731512045}
+  _horizontalAxis: {fileID: 1166582281}
+  _xAxisController:
+    _ki: 1
+    _kp: 1
+    _kd: 1
+    _maxOut: 1000
+    _minOut: -1000
+  _yAxisController:
+    _ki: 0.001
+    _kp: 1
+    _kd: 0.2
+    _maxOut: 90
+    _minOut: -90
+  _hoverTransform: {fileID: 909583049}
+  _verticalAimingSpeed: 2
 --- !u!4 &666547637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011339693244, guid: f94554303b4f7094ea5e12fe79985529,
@@ -11261,6 +11290,7 @@ GameObject:
   - component: {fileID: 909583048}
   - component: {fileID: 909583047}
   - component: {fileID: 909583050}
+  - component: {fileID: 909583051}
   m_Layer: 2
   m_Name: Hover
   m_TagString: Untagged
@@ -11342,6 +11372,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sensitivity: 2.35
   _freeLookCamera: {fileID: 396057730}
+--- !u!114 &909583051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909583045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82667043465b4695a0e3f99df80125c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveForce: 1800
+  _rotationTorque: -250
+  _regulator:
+    _ki: 0.001
+    _kp: 0.025
+    _kd: 0.005
+    _maxOut: 90
+    _minOut: -90
+  _gun: {fileID: 658691983}
 --- !u!1 &942052257
 GameObject:
   m_ObjectHideFlags: 0
@@ -11553,7 +11604,7 @@ MonoBehaviour:
     m_Bits: 1
   _maxDistance: 1.5
   _maxForce: 300
-  _damping: 0
+  _damping: 180
   _progressivity: 1.71
   _upFactor: 0.75
 --- !u!4 &1024729973 stripped
@@ -12419,7 +12470,7 @@ MonoBehaviour:
     m_Bits: 1
   _maxDistance: 1.5
   _maxForce: 300
-  _damping: 0
+  _damping: 180
   _progressivity: 1.71
   _upFactor: 0.75
 --- !u!4 &1447468138 stripped
@@ -17459,7 +17510,7 @@ MonoBehaviour:
     m_Bits: 1
   _maxDistance: 2.5
   _maxForce: 600
-  _damping: 200
+  _damping: 180
   _progressivity: 1.7
   _upFactor: 0.75
 --- !u!1 &1748024908
@@ -22343,7 +22394,7 @@ MonoBehaviour:
     m_Bits: 1
   _maxDistance: 1.5
   _maxForce: 300
-  _damping: 0
+  _damping: 180
   _progressivity: 1.71
   _upFactor: 0.75
 --- !u!1 &1823492604
@@ -22799,7 +22850,7 @@ MonoBehaviour:
     m_Bits: 1
   _maxDistance: 2.5
   _maxForce: 600
-  _damping: 200
+  _damping: 180
   _progressivity: 1.7
   _upFactor: 0.75
 --- !u!4 &2056745020 stripped
